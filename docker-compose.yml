@@ -16,7 +16,7 @@ services:
 
         volumes:
             - ./etc/ssl:/etc/nginx/ssl
-            - ./etc/service-example.conf:/etc/nginx/service.conf
+            - ./etc/service.conf:/etc/nginx/service.conf
             # - ./etc/service-example-2.conf:/etc/nginx/service2.conf # more services, should be service*.conf
             # - ./etc/stream-example-2.conf:/etc/nginx/stream2.conf # more streams, should be stream*.conf
             # - ./etc/conf.d:/etc/nginx/conf.d-le # configuration folder, all files from it will be added
@@ -26,10 +26,10 @@ services:
             - "443:443"
 
         environment:
-            - TZ=America/Chicago
+            - TZ=America/New_York
             - LETSENCRYPT=true
-            - LE_EMAIL=name@example.com
-            - LE_FQDN=www.example.com
+            - LE_EMAIL=v0atmage@gmail.com
+            - LE_FQDN=moat.chat
             #- SSL_CERT=le-crt.pem
             #- SSL_KEY=le-key.pem
             #- SSL_CHAIN_CERT=le-chain-crt.pem
